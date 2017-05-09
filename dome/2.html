@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            display: block;
+            margin: 20px auto;
+            /*height: 300px;*/
+            /*width: 300px;*/
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+<canvas></canvas>
+<script>
+    var c = document.querySelector('canvas');
+    var cc = c.getContext('2d');
+    console.log(cc);
+    cc.moveTo(100,50);
+    cc.lineTo(200,50);
+    cc.lineTo(200,100);
+    cc.lineTo(100,100);
+    cc.closePath();
+//    cc.strokeStyle = 'red';
+//    cc.stroke();
+    cc.fillStyle='#fff';
+    cc.fill();
+</script>
+</body>
+</html>

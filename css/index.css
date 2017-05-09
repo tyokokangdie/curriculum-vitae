@@ -1,0 +1,1052 @@
+@charset "utf-8";
+html {
+  overflow: hidden;
+  height: 100%;
+}
+html body {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+html body > .box {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+html body > .box > .loading {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background: url("../img/bg1.jpg") no-repeat center / cover;
+}
+html body > .box > .loading > .icon-loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  font-size: 6rem;
+  color: #2ECBBE;
+  animation: loading 1.5s linear infinite;
+  -webkit-animation: loading 1.5s linear infinite;
+}
+html body > .box > .swipe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+html body > .box > .swipe > section {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("../img/bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  color: #ffffff;
+}
+html body > .box > .swipe > section > .bg {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+html body > .box > .swipe > section > .bg > .svg {
+  position: absolute;
+  left: 50%;
+}
+html body > .box > .swipe > section > .bg > .svg:nth-of-type(1) {
+  top: 0;
+  height: 15rem;
+  width: 15rem;
+}
+html body > .box > .swipe > section > .bg > .svg:nth-of-type(2) {
+  bottom: 0;
+  height: 20rem;
+  width: 20rem;
+}
+html body > .box > .swipe > section > .bg > .svg > svg {
+  animation: rotate 13s linear infinite;
+  -webkit-animation: rotate 13s linear infinite;
+}
+html body > .box > .swipe > section > .bg > .svg > svg > path {
+  fill: rgba(78, 198, 161, 0.4);
+  opacity: 0.25;
+}
+html body > .box > .swipe > section > .bg > .line {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+html body > .box > .swipe > section > .bg > .line::before,
+html body > .box > .swipe > section > .bg > .line::after {
+  content: '';
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 1px;
+  height: 20rem;
+  background-color: rgba(78, 198, 161, 0.4);
+}
+html body > .box > .swipe > section > .bg > .line::before {
+  bottom: 1rem;
+  left: 13rem;
+}
+html body > .box > .swipe > section > .bg > .line::after {
+  bottom: 5rem;
+  left: 15rem;
+}
+html body > .box > .swipe > section > .titbox {
+  position: absolute;
+  left: 50%;
+}
+html body > .box > .swipe > section > .titbox > .box1 {
+  position: absolute;
+  top: 0rem;
+  right: 14rem;
+  height: 14rem;
+  width: 14rem;
+  background-color: rgba(8, 222, 204, 0.5);
+  -webkit-transform:  rotate(45deg);
+  -moz-transform:  rotate(45deg);
+  -ms-transform:  rotate(45deg);
+  -o-transform:  rotate(45deg);
+  transform:  rotate(45deg);
+}
+html body > .box > .swipe > section > .titbox > .box2 {
+  position: absolute;
+  top: 0rem;
+  right: 10rem;
+  height: 14rem;
+  width: 14rem;
+  background-color: #08decc;
+  -webkit-transform:  rotate(45deg);
+  -moz-transform:  rotate(45deg);
+  -ms-transform:  rotate(45deg);
+  -o-transform:  rotate(45deg);
+  transform:  rotate(45deg);
+}
+html body > .box > .swipe > section > .titbox > .text {
+  position: absolute;
+  top: 2.6rem;
+  left: -13rem;
+  font-family: "微软雅黑";
+  color: #000;
+  padding-top: 3rem;
+  text-align: left;
+}
+html body > .box > .swipe > section > .titbox > .text > p {
+  white-space: nowrap;
+}
+html body > .box > .swipe > section > .titbox > .text > p:nth-of-type(1) {
+  font-size: 2.2rem;
+}
+html body > .box > .swipe > section > .titbox > .text > p:nth-of-type(2) {
+  font-size: 1.7rem;
+}
+html body > .box > .swipe > section > .titbox > .text > p:nth-of-type(3) {
+  font-size: 1.4rem;
+  display: block;
+}
+html body > .box > .swipe > section > .titbox > .text > p:nth-of-type(3) span {
+  display: block;
+  overflow: hidden;
+}
+html body > .box > .swipe > section.active > .titbox > .box1 {
+  -webkit-transition: all 1s 0.2s ;
+  -moz-transition: all 1s 0.2s ;
+  -ms-transition: all 1s 0.2s ;
+  -o-transition: all 1s 0.2s ;
+  transition: all 1s 0.2s ;
+  right: 1rem;
+}
+html body > .box > .swipe > section.active > .titbox > .box2 {
+  -webkit-transition:  all 1s ;
+  -moz-transition:  all 1s ;
+  -ms-transition:  all 1s ;
+  -o-transition:  all 1s ;
+  transition:  all 1s ;
+  right: 2.2rem;
+}
+html body > .box > .swipe > section:nth-of-type(1) {
+  background-image: url("../img/bg1.jpg");
+}
+html body > .box > .swipe > section:nth-of-type(1) > .box1 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  height: 6.5rem;
+  width: 6.5rem;
+  -webkit-transform: translate(-50%, 0) rotate(45deg) scale(0, 0);
+  -moz-transform: translate(-50%, 0) rotate(45deg) scale(0, 0);
+  -ms-transform: translate(-50%, 0) rotate(45deg) scale(0, 0);
+  -o-transform: translate(-50%, 0) rotate(45deg) scale(0, 0);
+  transform: translate(-50%, 0) rotate(45deg) scale(0, 0);
+  background-color: rgba(46, 203, 190, 0.5);
+}
+html body > .box > .swipe > section:nth-of-type(1) > .box2 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  height: 24rem;
+  width: 24rem;
+  -webkit-transform: translate(-50%, 0) rotate(0deg);
+  -moz-transform: translate(-50%, 0) rotate(0deg);
+  -ms-transform: translate(-50%, 0) rotate(0deg);
+  -o-transform: translate(-50%, 0) rotate(0deg);
+  transform: translate(-50%, 0) rotate(0deg);
+}
+html body > .box > .swipe > section:nth-of-type(1) > .box2 > .titbg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 57%;
+  width: 57%;
+  -webkit-transform: translate(-50%, -49%) rotate(45deg) scale(0.2, 0.2);
+  -moz-transform: translate(-50%, -49%) rotate(45deg) scale(0.2, 0.2);
+  -ms-transform: translate(-50%, -49%) rotate(45deg) scale(0.2, 0.2);
+  -o-transform: translate(-50%, -49%) rotate(45deg) scale(0.2, 0.2);
+  transform: translate(-50%, -49%) rotate(45deg) scale(0.2, 0.2);
+  background-color: #2ECBBE;
+  opacity: 0;
+}
+html body > .box > .swipe > section:nth-of-type(1) > .box2 > .tittext {
+  position: relative;
+  color: #010505;
+  text-align: center;
+  height: 100%;
+  padding-top: 38%;
+}
+html body > .box > .swipe > section:nth-of-type(1) > .box2 > .tittext > h2 {
+  font: 2.6rem/4.5rem "微软雅黑";
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  opacity: 0;
+}
+html body > .box > .swipe > section:nth-of-type(1) > .box2 > .tittext > h3 {
+  font: 2.2rem/3rem "微软雅黑";
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  opacity: 0;
+}
+html body > .box > .swipe > section:nth-of-type(1) > .box2 > .border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+html body > .box > .swipe > section:nth-of-type(1) > .box2 > .border > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/border.png") no-repeat center center / cover;
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+  opacity: 0;
+}
+html body > .box > .swipe > section:nth-of-type(1) > h3 {
+  margin-top: 39rem;
+  font: 300 1.7rem/2rem "微软雅黑";
+  -webkit-transform:  scale(0, 0);
+  -moz-transform:  scale(0, 0);
+  -ms-transform:  scale(0, 0);
+  -o-transform:  scale(0, 0);
+  transform:  scale(0, 0);
+  opacity: 0;
+}
+html body > .box > .swipe > section:nth-of-type(1).active {
+  /*带有这个类名的section是正在显示的页面,激活动画*/
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box1 {
+  transition: all 1s;
+  -webkit-transform: translate(-50%, 0) rotate(45deg) scale(1, 1);
+  -moz-transform: translate(-50%, 0) rotate(45deg) scale(1, 1);
+  -ms-transform: translate(-50%, 0) rotate(45deg) scale(1, 1);
+  -o-transform: translate(-50%, 0) rotate(45deg) scale(1, 1);
+  transform: translate(-50%, 0) rotate(45deg) scale(1, 1);
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .titbg {
+  transition: all 2.5s;
+  -webkit-transform: translate(-50%, -49%) rotate(45deg);
+  -moz-transform: translate(-50%, -49%) rotate(45deg);
+  -ms-transform: translate(-50%, -49%) rotate(45deg);
+  -o-transform: translate(-50%, -49%) rotate(45deg);
+  transform: translate(-50%, -49%) rotate(45deg);
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .tittext > h2 {
+  transition: all 1.5s;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .tittext > h3 {
+  transition: all 2s;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(1) {
+  -webkit-transition: all 1s 0s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(2) {
+  -webkit-transition: all 1s 0.1s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0.1s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0.1s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0.1s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0.1s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(3) {
+  -webkit-transition: all 1s 0.2s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0.2s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0.2s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0.2s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0.2s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(4) {
+  -webkit-transition: all 1s 0.3s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0.3s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0.3s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0.3s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0.3s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(5) {
+  -webkit-transition: all 1s 0.4s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0.4s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0.4s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0.4s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0.4s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(6) {
+  -webkit-transition: all 1s 0.5s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0.5s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0.5s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0.5s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0.5s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(7) {
+  -webkit-transition: all 1s 0.6s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0.6s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0.6s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0.6s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0.6s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(8) {
+  -webkit-transition: all 1s 0.7s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0.7s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0.7s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0.7s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0.7s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(9) {
+  -webkit-transition: all 1s 0.8s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0.8s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0.8s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0.8s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0.8s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > .box2 > .border > li:nth-of-type(10) {
+  -webkit-transition: all 1s 0.9s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -moz-transition: all 1s 0.9s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -ms-transition: all 1s 0.9s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  -o-transition: all 1s 0.9s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  transition: all 1s 0.9s cubic-bezier(0.29, 0.82, 0.63, 1.9) ;
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(1).active > h3 {
+  -webkit-transition: opacity 1s 0.5s ;
+  -moz-transition: opacity 1s 0.5s ;
+  -ms-transition: opacity 1s 0.5s ;
+  -o-transition: opacity 1s 0.5s ;
+  transition: opacity 1s 0.5s ;
+  opacity: 1;
+  animation: name 2s 0.5s linear forwards;
+  -webkit-animation: name 2s 0.5s linear forwards;
+
+}
+html body > .box > .swipe > section:nth-of-type(2) > .bg > .svg:nth-of-type(1) {
+  -webkit-transform: translate(40%, 10%);
+  -moz-transform: translate(40%, 10%);
+  -ms-transform: translate(40%, 10%);
+  -o-transform: translate(40%, 10%);
+  transform: translate(40%, 10%);
+}
+html body > .box > .swipe > section:nth-of-type(2) > .bg > .svg:nth-of-type(2) {
+  -webkit-transform: translate(-105%, 5%);
+  -moz-transform: translate(-105%, 5%);
+  -ms-transform: translate(-105%, 5%);
+  -o-transform: translate(-105%, 5%);
+  transform: translate(-105%, 5%);
+}
+html body > .box > .swipe > section:nth-of-type(2) > .bg > .line {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .bg > .line::before,
+html body > .box > .swipe > section:nth-of-type(2) > .bg > .line::after {
+  content: '';
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 1px;
+  height: 20rem;
+  background-color: rgba(78, 198, 161, 0.4);
+}
+html body > .box > .swipe > section:nth-of-type(2) > .bg > .line::before {
+  bottom: 1rem;
+  left: 13rem;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .bg > .line::after {
+  bottom: 5rem;
+  left: 15rem;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .titbox {
+  top: -1.8rem;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .titbox > .text > p:nth-of-type(3) {
+  width: 8rem;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .info {
+  position: absolute;
+  top: 17rem;
+  left: 50%;
+  -webkit-transform: translate(-110%, 0) scale(0, 0);
+  -moz-transform: translate(-110%, 0) scale(0, 0);
+  -ms-transform: translate(-110%, 0) scale(0, 0);
+  -o-transform: translate(-110%, 0) scale(0, 0);
+  transform: translate(-110%, 0) scale(0, 0);
+  text-align: left;
+  font: 300 1.3rem/2.5rem "微软雅黑";
+}
+html body > .box > .swipe > section:nth-of-type(2) > .imgbg,
+html body > .box > .swipe > section:nth-of-type(2) > .img {
+  position: absolute;
+  left: 50%;
+  top: 12rem;
+  background-color: #08decc;
+  -webkit-transform: translate(10%, 0) scale(0, 0);
+  -moz-transform: translate(10%, 0) scale(0, 0);
+  -ms-transform: translate(10%, 0) scale(0, 0);
+  -o-transform: translate(10%, 0) scale(0, 0);
+  transform: translate(10%, 0) scale(0, 0);
+  height: 13.6rem;
+  width: 10.5rem;
+  border: 3px solid #08decc;
+  box-sizing: content-box;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .img {
+  padding: 3px;
+  border: none;
+  opacity: 0;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .img > i {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url("../img/bg3.png") no-repeat center / cover;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .evaluation {
+  position: absolute;
+  top: 32rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  height: 11.2rem;
+  width: 22.5rem;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .evaluation > div {
+  float: left;
+  font-family: "微软雅黑";
+  font-weight: 300;
+}
+html body > .box > .swipe > section:nth-of-type(2) > .evaluation > .tit {
+  padding: 0.7rem 0.5rem 0rem;
+  width: 2.5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  -webkit-transform: translate(-300%, 0);
+  -moz-transform: translate(-300%, 0);
+  -ms-transform: translate(-300%, 0);
+  -o-transform: translate(-300%, 0);
+  transform: translate(-300%, 0);
+}
+html body > .box > .swipe > section:nth-of-type(2) > .evaluation > .line {
+  margin-left: 1rem;
+  width: 0.35rem;
+  height: 100%;
+  background-color: #08decc;
+  -webkit-transform: translate(0, 200%);
+  -moz-transform: translate(0, 200%);
+  -ms-transform: translate(0, 200%);
+  -o-transform: translate(0, 200%);
+  transform: translate(0, 200%);
+}
+html body > .box > .swipe > section:nth-of-type(2) > .evaluation > .text {
+  padding-left: 1rem;
+  float: none;
+  overflow: hidden;
+  -webkit-transform: translate(200%, 0);
+  -moz-transform: translate(200%, 0);
+  -ms-transform: translate(200%, 0);
+  -o-transform: translate(200%, 0);
+  transform: translate(200%, 0);
+}
+html body > .box > .swipe > section:nth-of-type(2) > .evaluation > .text > p {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+html body > .box > .swipe > section:nth-of-type(2).active > .titbox > .text > p:nth-of-type(3) span {
+  animation: text 1s steps(11, end);
+  -webkit-animation: text 1s steps(11, end);
+}
+html body > .box > .swipe > section:nth-of-type(2).active > .info {
+  -webkit-transition: all 2s 0.5s ;
+  -moz-transition: all 2s 0.5s ;
+  -ms-transition: all 2s 0.5s ;
+  -o-transition: all 2s 0.5s ;
+  transition: all 2s 0.5s ;
+  -webkit-transform: translate(-110%, 0) scale(1, 1);
+  -moz-transform: translate(-110%, 0) scale(1, 1);
+  -ms-transform: translate(-110%, 0) scale(1, 1);
+  -o-transform: translate(-110%, 0) scale(1, 1);
+  transform: translate(-110%, 0) scale(1, 1);
+}
+html body > .box > .swipe > section:nth-of-type(2).active > .imgbg {
+  transition: all 1.5s;
+  -webkit-transform: translate(10%, 0) scale(1, 1);
+  -moz-transform: translate(10%, 0) scale(1, 1);
+  -ms-transform: translate(10%, 0) scale(1, 1);
+  -o-transform: translate(10%, 0) scale(1, 1);
+  transform: translate(10%, 0) scale(1, 1);
+}
+html body > .box > .swipe > section:nth-of-type(2).active > .img {
+  transition: all 1.2s 0.3s;
+  -webkit-transform: translate(10%, 0) scale(1, 1);
+  -moz-transform: translate(10%, 0) scale(1, 1);
+  -ms-transform: translate(10%, 0) scale(1, 1);
+  -o-transform: translate(10%, 0) scale(1, 1);
+  transform: translate(10%, 0) scale(1, 1);
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(2).active > .evaluation > .tit {
+  transition: all 1s 1s;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+html body > .box > .swipe > section:nth-of-type(2).active > .evaluation > .line {
+  -webkit-transition: all 1s 0.9s ;
+  -moz-transition: all 1s 0.9s ;
+  -ms-transition: all 1s 0.9s ;
+  -o-transition: all 1s 0.9s ;
+  transition: all 1s 0.9s ;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+html body > .box > .swipe > section:nth-of-type(2).active > .evaluation > .text {
+  transition: all 1s 1.2s;
+  -webkit-transition: all 1s 1.2s ;
+  -moz-transition: all 1s 1.2s ;
+  -ms-transition: all 1s 1.2s ;
+  -o-transition: all 1s 1.2s ;
+  transition: all 1s 1.2s ;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+html body > .box > .swipe > section:nth-of-type(3) > .bg > .svg:nth-of-type(1) {
+  -webkit-transform: translate(40%, -5%);
+  -moz-transform: translate(40%, -5%);
+  -ms-transform: translate(40%, -5%);
+  -o-transform: translate(40%, -5%);
+  transform: translate(40%, -5%);
+}
+html body > .box > .swipe > section:nth-of-type(3) > .bg > .svg:nth-of-type(2) {
+  -webkit-transform: translate(-130%, 50%);
+  -moz-transform: translate(-130%, 50%);
+  -ms-transform: translate(-130%, 50%);
+  -o-transform: translate(-130%, 50%);
+  transform: translate(-130%, 50%);
+}
+html body > .box > .swipe > section:nth-of-type(3) > .titbox {
+  top: -3rem;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .titbox > .text > p:nth-of-type(3) {
+  width: 2.8rem;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .ability {
+  position: absolute;
+  top: 14.5rem;
+  left: 50%;
+  height: 250rem;
+  width: 100%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+/*html body > .box > .swipe > section:nth-of-type(3) > .ability > .name {
+  float: left;
+  height: 100%;
+  width: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: translate(0, 20%);
+  opacity: 0;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .ability > .name p {
+  display: block;
+  width: 3.6rem;
+  height: 3.6rem;
+  font: 500 1.6rem/3.2rem "微软雅黑";
+  border: 0.2rem dotted #1c4b65;
+  border-radius: 50%;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .ability > .value {
+  float: left;
+  width: 18rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 0.4rem;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .ability > .value > div {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #edf0f5;
+  transform: translate(100%, 0);
+  opacity: 0;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .ability > .value > div::before {
+  content: '';
+  display: block;
+  height: 2.5rem;
+  width: 80%;
+  background-color: #2ecbbe;
+  transform: translate(-100%, 0);
+  opacity: 0;
+}*/
+html body > .box > .swipe > section:nth-of-type(3) > .skill {
+  position: absolute;
+  top: 32rem;
+  left: 50%;
+  height: 16rem;
+  width: 21rem;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .skill > div {
+  display: flex;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .skill > div > p {
+  display: block;
+  width: 7.5rem;
+  height: 2.3rem;
+  font: 1.1rem/2rem "微软雅黑";
+  border: 0.15rem solid #2dcabd;
+  border-radius: 1.15rem;
+  color: #ffffff;
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  opacity: 0;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .skill > div:nth-of-type(1) {
+  justify-content: space-around;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .skill > div:nth-of-type(1) > p {
+  width: 10rem;
+  height: 2.5rem;
+  font: 600 1.2rem/2.3rem "微软雅黑";
+  border-radius: 1.25rem;
+  background-color: #2dcabd;
+  color: #000;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .skill > div:nth-of-type(2) {
+  justify-content: space-between;
+}
+html body > .box > .swipe > section:nth-of-type(3) > .skill > div:nth-of-type(3),
+html body > .box > .swipe > section:nth-of-type(3) > .skill > div:nth-of-type(4) {
+  justify-content: space-around;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .titbox > .text > p:nth-of-type(3) span {
+  animation: text 0.5s steps(5, end);
+  -webkit-animation: text 0.5s steps(5, end);
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .name {
+  transition: all 2s 1s;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div::before {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div:nth-of-type(1) {
+  transition: all 2s 0.5s;
+  -webkit-transition: all 2s 0.5s;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div:nth-of-type(1)::before {
+  transition: all 2s 2s;
+  -webkit-transition: all 2s 2s;
+  width: 80%;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div:nth-of-type(2) {
+  transition: all 2s 0.7s;
+  -webkit-transition: all 2s 0.7s;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div:nth-of-type(2)::before {
+  transition: all 2s 2.2s;
+  -webkit-transition: all 2s 2.2s;
+  width: 75%;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div:nth-of-type(3) {
+  transition: all 2s 0.9s;
+  -webkit-transition: all 2s 0.9s;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div:nth-of-type(3)::before {
+  transition: all 2s 2.4s;
+  -webkit-transition: all 2s 2.4s;
+  width: 85%;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div:nth-of-type(4) {
+  transition: all 2s 1.1s;
+  -webkit-transition: all 2s 1.1s;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .ability > .value > div:nth-of-type(4)::before {
+  transition: all 2s 2.6s;
+  -webkit-transition: all 2s 2.6s;
+  width: 60%;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .skill p {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .skill > div:nth-of-type(1) > p {
+  -webkit-transition: all 1s 2s;
+  -moz-transition: all 1s 2s;
+  -ms-transition: all 1s 2s;
+  -o-transition: all 1s 2s;
+  transition: all 1s 2s;
+
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .skill > div:nth-of-type(2) > p:nth-of-type(1) {
+  -webkit-transition: all 1s 2.2s;
+  -moz-transition: all 1s 2.2s;
+  -ms-transition: all 1s 2.2s;
+  -o-transition: all 1s 2.2s;
+  transition: all 1s 2.2s;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .skill > div:nth-of-type(2) > p:nth-of-type(2) {
+  -webkit-transition: all 1s 2.4s;
+  -moz-transition: all 1s 2.4s;
+  -ms-transition: all 1s 2.4s;
+  -o-transition: all 1s 2.4s;
+  transition: all 1s 2.4s;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .skill > div:nth-of-type(3) > p:nth-of-type(1) {
+  -webkit-transition: all 1s 2.6s;
+  -moz-transition: all 1s 2.6s;
+  -ms-transition: all 1s 2.6s;
+  -o-transition: all 1s 2.6s;
+  transition: all 1s 2.6s;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .skill > div:nth-of-type(3) > p:nth-of-type(2) {
+  -webkit-transition: all 1s 2.8s;
+  -moz-transition: all 1s 2.8s;
+  -ms-transition: all 1s 2.8s;
+  -o-transition: all 1s 2.8s;
+  transition: all 1s 2.8s;
+}
+html body > .box > .swipe > section:nth-of-type(3).active > .skill > div:nth-of-type(4) > p {
+  -webkit-transition: all 1s  3s;
+  -moz-transition: all 1s  3s;
+  -ms-transition: all 1s  3s;
+  -o-transition: all 1s  3s;
+  transition: all 1s  3s;
+}
+html body > .box > .swipe > section:nth-of-type(4) > .bg > .svg:nth-of-type(1) {
+  -webkit-transform: translate(40%, -5%);
+  -moz-transform: translate(40%, -5%);
+  -ms-transform: translate(40%, -5%);
+  -o-transform: translate(40%, -5%);
+  transform: translate(40%, -5%);
+}
+html body > .box > .swipe > section:nth-of-type(4) > .bg > .svg:nth-of-type(2) {
+  -webkit-transform: translate(-110%, 25%);
+  -moz-transform: translate(-110%, 25%);
+  -ms-transform: translate(-110%, 25%);
+  -o-transform: translate(-110%, 25%);
+  transform: translate(-110%, 25%);
+}
+html body > .box > .swipe > section:nth-of-type(4) > .titbox {
+  top: -3rem;
+}
+html body > .box > .swipe > section:nth-of-type(4) > .titbox > .text > p:nth-of-type(3) {
+  width: 7.3rem;
+}
+html body > .box > .swipe > section:nth-of-type(4).active > .titbox > .text > p:nth-of-type(3) span {
+  animation: text 0.8s steps(10, end);
+  -webkit-animation: text 0.8s steps(10, end);
+}
+html body > .box > .swipe > section:nth-of-type(5) {
+  background-image: url("../img/bg3.png");
+}
+html body > .box > .swipe > section:nth-of-type(5) > .bg > .svg:nth-of-type(1) {
+  -webkit-transform: translate(40%, -5%);
+  -moz-transform: translate(40%, -5%);
+  -ms-transform: translate(40%, -5%);
+  -o-transform: translate(40%, -5%);
+  transform: translate(40%, -5%);
+}
+html body > .box > .swipe > section:nth-of-type(5) > .bg > .svg:nth-of-type(2) {
+  -webkit-transform: translate(-110%, 25%);
+  -moz-transform: translate(-110%, 25%);
+  -ms-transform: translate(-110%, 25%);
+  -o-transform: translate(-110%, 25%);
+  transform: translate(-110%, 25%);
+}
+html body > .box > .swipe > section:nth-of-type(5) > .titbox {
+  top: -3rem;
+}
+html body > .box > .swipe > section:nth-of-type(5) > .titbox > .text > p:nth-of-type(2) {
+  font-size: 1.4rem;
+}
+html body > .box > .audiobox {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 3;
+}
+html body > .box > .audiobox > .audiobtn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 30px;
+  width: 30px;
+  background: url("../img/autoplayer.svg") no-repeat center center / cover;
+  animation: rotate 2s linear infinite;
+  -webkit-animation: rotate 2s linear infinite;
+}
+html body > .box > .audiobox > .btnline {
+  position: absolute;
+  top: -4px;
+  right: 15px;
+  width: 2px;
+  height: 38px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: none;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes name {
+  0% {
+    transform: scale(0, 0);
+  }
+  20% {
+    transform: scale(1.3, 1.3);
+  }
+  40% {
+    transform: scale(0.8, 0.8);
+  }
+  60% {
+    transform: scale(1.15, 1.15);
+  }
+  80% {
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes name {
+  0% {
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+  }
+  20% {
+    -webkit-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3);
+  }
+  40% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+  60% {
+    -webkit-transform: scale(1.15, 1.15);
+    transform: scale(1.15, 1.15);
+  }
+  80% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes text {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes text {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

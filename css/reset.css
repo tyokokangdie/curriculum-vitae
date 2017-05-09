@@ -1,0 +1,95 @@
+@charset "utf-8";
+/*=========================Reset_start==========================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "宋体", "微软雅黑", Arail, Tabhoma;
+    font-size: 12px;
+    text-align: left;
+    /*!*禁止文字被选中*!
+    -moz-user-select: none;
+    !*火狐*!
+    -webkit-user-select: none;
+    !*webkit浏览器*!
+    -ms-user-select: none;
+    !*IE10*!
+    -khtml-user-select: none;
+    !*早期浏览器*!
+    user-select: none;*/
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+input, select, textarea {
+    outline: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, strong, var, em {
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:before, .clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+/*废物利用*/
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*公共类*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+/*==========================Reset_End===========================*/
